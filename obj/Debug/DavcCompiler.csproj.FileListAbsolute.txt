@@ -1,0 +1,6 @@
+C:\Users\jdavis2\Documents\James' Repos\DavcCompiler\bin\Debug\DavcCompiler.exe.config
+C:\Users\jdavis2\Documents\James' Repos\DavcCompiler\bin\Debug\DavcCompiler.exe
+C:\Users\jdavis2\Documents\James' Repos\DavcCompiler\bin\Debug\DavcCompiler.pdb
+C:\Users\jdavis2\Documents\James' Repos\DavcCompiler\obj\Debug\DavcCompiler.csprojResolveAssemblyReference.cache
+C:\Users\jdavis2\Documents\James' Repos\DavcCompiler\obj\Debug\DavcCompiler.exe
+C:\Users\jdavis2\Documents\James' Repos\DavcCompiler\obj\Debug\DavcCompiler.pdb
