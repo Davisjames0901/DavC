@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using DavcCompiler.lib;
 using System.Linq;
 using DavcCompiler.Types;
 using System.Text;
@@ -13,6 +12,7 @@ namespace DavcCompiler
     {
         private static List<string> SyntaxErrors;
         private static Dictionary<Guid, string> Strings;
+
         public Program(SourceFile program)
         {
             program.Start();
@@ -24,7 +24,7 @@ namespace DavcCompiler
             Strings = new Dictionary<Guid, string>();
             Console.WriteLine("Input File Path.");
             var filePath = Console.ReadLine();
-            var source = File.ReadAllText("C:\\temp\\test.dav").RemoveCharicters('\r', '\n', '\t');
+            var source = File.ReadAllText("C:\\temp\\test.dav").RemoveCharacters('\r', '\n', '\t');
             var formattedSource = prepareFile(source);
             var test = new SourceFile("main", formattedSource);
             test.Start();
@@ -51,9 +51,7 @@ namespace DavcCompiler
             Console.WriteLine("Press any key to exit");
             Console.ReadKey();
         }
-
-
-        //Deffinantly needed
+		
         private static List<string> prepareFile(string s)
         {
             var program = new List<string>();
@@ -139,9 +137,9 @@ namespace DavcCompiler
             
             return Beautifier(program);
         }
+
         public static List<string> Beautifier(List<string> program)
         {
-            var importsDone = false;
             var start2Found = false;
             var i = 0;
             var beautiful = new List<string>();
@@ -157,7 +155,7 @@ namespace DavcCompiler
                     }
                     else
                     {
-                        SyntaxErrors.Add(string.Format("Illeagle statement found! \n Line:{0}   {1}", i, item));
+                        SyntaxErrors.Add(string.Format("Illegal statement found! \n Line:{0}   {1}", i, item));
                     }
                 }
                 else if (!start2Found)
@@ -169,7 +167,7 @@ namespace DavcCompiler
                     }
                     else
                     {
-                        SyntaxErrors.Add(string.Format("Illeagle statement found! \n Line:{0}   {1}", i, item));
+                        SyntaxErrors.Add(string.Format("Illegal statement found! \n Line:{0}   {1}", i, item));
                     }
                 }
                 else if (start2Found)
@@ -188,7 +186,7 @@ namespace DavcCompiler
                             }
                             else
                             {
-                                SyntaxErrors.Add(string.Format("Illeagle statement found! \n Line:{0}   {1}", i, item));
+                                SyntaxErrors.Add(string.Format("Illegal statement found! \n Line:{0}   {1}", i, item));
                             }
                         }
                         else
@@ -201,7 +199,7 @@ namespace DavcCompiler
                             }
                             else
                             {
-                                SyntaxErrors.Add(string.Format("Illeagle statement found! \n Line:{0}   {1}", i, item));
+                                SyntaxErrors.Add(string.Format("Illegal statement found! \n Line:{0}   {1}", i, item));
                             }
                         }
                     }
@@ -214,8 +212,5 @@ namespace DavcCompiler
             }
             return beautiful;
         }
-        //end need
-
-       
     }
 }

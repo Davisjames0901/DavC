@@ -10,7 +10,7 @@ namespace DavcCompiler.help
     {
         
         public static char[] _delims = { '*', '+', '-', '=', '/' };
-        public static string RemoveCharicters(this string s, params char[] c)
+        public static string RemoveCharacters(this string s, params char[] c)
         {
             bool inLiteral = false;
             for (int i = 0; i < s.Length; i++)
