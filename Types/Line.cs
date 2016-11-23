@@ -35,30 +35,30 @@ namespace DavcCompiler.Types
             if (LineTokens.Count() == 1)
             {
                 var token = LineTokens.Single();
-                    switch (token.Type)
-                    {
-                        case TokenTypeEnum.Break:
-                            break;
-                        case TokenTypeEnum.Continue:
-                            break;
-                        default:
+                switch (token.Type)
+                {
+                    case TokenTypeEnum.Break:
+                        break;
+                    case TokenTypeEnum.Continue:
+                        break;
+                    default:
                         return token.value;
                 }
             }
             else if (LineTokens.Count() == 1)
             {
-                if(LineTokens[0].Type == TokenTypeEnum.Return)
+                if (LineTokens[0].Type == TokenTypeEnum.Return)
                 {
                     var value = LineTokens[1].value == null ? LineTokens[1].token : LineTokens[1].value.Value;
                     return new Data(value, Helpers.GetType(value));
                 }
             }
-            else if(LineTokens.Count() >2)
+            else if (LineTokens.Count() > 2)
             {
                 var value = string.Empty;
                 if (LineTokens[1].token == "=")
                 {
-                    if (LineTokens.Any(x => x.Type == TokenTypeEnum.String) && LineTokens.Where(x => x.Type == TokenTypeEnum.Operator).All(x=>x.token == "+"))
+                    if (LineTokens.Any(x => x.Type == TokenTypeEnum.String) && LineTokens.Where(x => x.Type == TokenTypeEnum.Operator).All(x => x.token == "+"))
                     {
                         for (var i = 2; i < LineTokens.Where(x => x.Type == TokenTypeEnum.Operator).Count(); i++)
                         {
@@ -87,18 +87,19 @@ namespace DavcCompiler.Types
             }
             return null;
         }
-        
+
         #region ParseMethods
 
         private string PrepareLine(string s)
         {
             var buffer = string.Empty;
+            var inSingle = false;
+            var inDouble = false;
             foreach (var item in s)
             {
-                var inSingle = false;
-                var inDouble = false;
                 if (!inSingle && !inDouble)
                 {
+
                     if (_delims.Contains(item.ToString()))
                     {
                         buffer += " ";
@@ -139,7 +140,7 @@ namespace DavcCompiler.Types
                 }
             }
         }
-#endregion
+        #endregion
         #region CodeObject
         public override Variable GetVariable(string var)
         {

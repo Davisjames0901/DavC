@@ -10,8 +10,6 @@ namespace DavcCompiler.Types
 {
     public class LineToken: CodeObject
     {
-
-        private static string[] _illeagleSymboles = { };
         public LineToken(string s, CodeObject parent)
         {
             Parent = parent;
