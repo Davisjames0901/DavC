@@ -7,3 +7,6 @@ C:\Users\jdavis2\Documents\James' Repos\DavcCompiler\obj\Debug\DavcCompiler.pdb
 C:\Users\davis\Documents\Projects\bin\Debug\DavcCompiler.exe.config
 C:\Users\davis\Documents\Projects\obj\Debug\DavcCompiler.exe
 C:\Users\davis\Documents\Projects\obj\Debug\DavcCompiler.pdb
+C:\Programing\C#\Git\DavC\bin\Debug\DavcCompiler.exe.config
+C:\Programing\C#\Git\DavC\obj\Debug\DavcCompiler.exe
+C:\Programing\C#\Git\DavC\obj\Debug\DavcCompiler.pdb
