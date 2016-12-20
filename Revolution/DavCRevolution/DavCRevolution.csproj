@@ -43,16 +43,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interfaces\ICodeObject.cs" />
-    <Compile Include="Interfaces\ILine\IComputeLine.cs" />
-    <Compile Include="Interfaces\ILine\IComputeLineWithMethod.cs" />
-    <Compile Include="Interfaces\ILine\ILine.cs" />
-    <Compile Include="Interfaces\ILine\IMethodCall.cs" />
-    <Compile Include="Interfaces\ILine\IReturnLinecs.cs" />
-    <Compile Include="Interfaces\IMethod.cs" />
-    <Compile Include="Interfaces\ISourceFile.cs" />
+    <Compile Include="CodeObjects\Standard\ComputeLine.cs" />
+    <Compile Include="CodeObjects\Standard\ComputeLineWithMethod.cs" />
+    <Compile Include="CodeObjects\Standard\Method.cs" />
+    <Compile Include="CodeObjects\Standard\MethodCall.cs" />
+    <Compile Include="CodeObjects\Standard\ReturnLine.cs" />
+    <Compile Include="CodeObjects\Standard\SourceFile.cs" />
+    <Compile Include="Factorys\InterpreterFactory.cs" />
+    <Compile Include="Factorys\ParserFactory.cs" />
+    <Compile Include="Interfaces\ICodeObjects\IClass.cs" />
+    <Compile Include="Interfaces\ICodeObjects\ICodeObject.cs" />
+    <Compile Include="Interfaces\ICodeObjects\ILine\IComputeLine.cs" />
+    <Compile Include="Interfaces\ICodeObjects\ILine\IComputeLineWithMethod.cs" />
+    <Compile Include="Interfaces\ICodeObjects\ILine\ILine.cs" />
+    <Compile Include="Interfaces\ICodeObjects\ILine\IMethodCall.cs" />
+    <Compile Include="Interfaces\ICodeObjects\ILine\IReturnLinecs.cs" />
+    <Compile Include="Interfaces\ICodeObjects\IMethod.cs" />
+    <Compile Include="Interfaces\ICodeObjects\ISourceFile.cs" />
+    <Compile Include="Interfaces\ICodeObjects\IVariable.cs" />
+    <Compile Include="Interfaces\IInterperter.cs" />
+    <Compile Include="Interfaces\IParser.cs" />
     <Compile Include="lib\ConfigHelpers.cs" />
     <Compile Include="lib\Interpreter.cs" />
+    <Compile Include="lib\Parser.cs" />
+    <Compile Include="lib\StringHelpers.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

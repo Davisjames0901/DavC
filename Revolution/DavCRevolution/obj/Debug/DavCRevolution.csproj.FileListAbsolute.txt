@@ -1,1 +1,3 @@
 c:\users\davis\documents\visual studio 2015\Projects\DavCRevolution\DavCRevolution\bin\Debug\DavCRevolution.exe.config
+C:\Users\davis\Documents\Projects\Revolution\DavCRevolution\bin\Debug\DavCRevolution.exe.config
+C:\Users\davis\Documents\Projects\Revolution\DavCRevolution\obj\Debug\DavCRevolution.csprojResolveAssemblyReference.cache

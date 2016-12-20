@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace DavCRevolution.Interfaces
 {
-    public interface IMethod
+    public interface ICodeObject
     {
+        ICodeObject Parent { get; set; }
+        string GetTrace();
     }
 }
