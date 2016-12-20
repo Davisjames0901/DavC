@@ -194,6 +194,7 @@ namespace DavCRevolution.lib
             {
                 method.Lines.ToList().Add(CreateLine(line));
             }
+            return method;
         }
 
         private ILine CreateLine(string line)
